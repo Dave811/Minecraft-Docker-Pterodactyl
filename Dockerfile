@@ -19,6 +19,8 @@ ENV  HOME /home/container
 
 WORKDIR /home/container
 
+RUN cd /home/container
+
 RUN touch ServerStart.sh
 RUN chmod 777 ServerStart.sh
 RUN chown container ServerStart.sh
