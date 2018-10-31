@@ -9,6 +9,10 @@ RUN apt install -y curl wget file bzip2 gzip unzip openjdk-8-jre
 
 RUN useradd -d /home/container -s /bin/bash -u 999 container
 
+RUN touch ServerStart.sh
+RUN chmod 777 ServerStart.sh
+RUN chown container ServerStart.sh
+
 USER container
 ENV  USER container
 ENV  HOME /home/container
